@@ -1,0 +1,118 @@
+/* HOW DOES IT WORK*/
+
+.how-it-works {
+  width: 100%;
+  padding: 85px 20px;
+  background: #FEF9F0;
+  text-align: center;
+}
+
+.how-it-works .section-title {
+  color: #F17228;
+  margin-bottom: 60px;
+}
+
+.steps-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.step {
+  text-align: center;
+  padding: 10px;
+}
+
+.step-icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(255, 179, 14, 0.16);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.step:hover .step-icon {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(255, 179, 14, 0.28);
+}
+
+.step-icon img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.step h3 {
+  font-family: 'Source Sans 3', 'Source Sans Pro', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #757575;
+  line-height: 1.6;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+                          /* RESPONSIVE*/
+
+@media (max-width: 1200px) {
+  .steps-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .how-it-works {
+    padding: 35px 10px;
+  }
+
+  .step-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 12px;
+  }
+
+  .step-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .step h3 {
+    font-size: 16.5px;
+    margin-bottom: 6px;
+  }
+
+  .step p {
+    font-size: 12.5px;
+  }
+}

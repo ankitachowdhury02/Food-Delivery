@@ -1,0 +1,289 @@
+
+.navbar {
+  width: 100%;
+  height: 82px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EEEEEE;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Location */
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #757575;
+  white-space: nowrap;
+}
+
+.location strong {
+  color: #212529;
+  font-weight: 700;
+}
+
+.location-icon {
+  color: #FFB30E;
+  flex-shrink: 0;
+}
+
+.location span {
+  color: #757575;
+}
+
+.location b {
+  color: #212529;
+  font-weight: 700;
+}
+
+/* Nav Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #212529;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: color 0.2s ease;
+}
+
+.search-btn svg {
+  color: #FFB30E;
+}
+
+.search-btn:hover {
+  color: #FFA100;
+  background: rgba(255, 179, 14, 0.08);
+}
+
+.login-btn {
+  height: 46px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: #FFA100;
+  border: 1px solid rgba(255, 179, 14, 0.25);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(255, 179, 14, 0.22);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.login-btn svg {
+  color: #FFA100;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 179, 14, 0.32);
+  background: #FFFDF9;
+}
+
+/* Navbar Search Box */
+.navbar-search-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  padding: 12px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 2px solid #FFB30E;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 101;
+  animation: slideDownSearch 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDownSearch {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-search-box input {
+  flex: 1;
+  height: 42px;
+  padding: 0 14px;
+  border: 1.5px solid #FFCE67;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #212529;
+  outline: none;
+  background: #FEF9F0;
+  transition: all 0.2s ease;
+}
+
+.navbar-search-box input:focus {
+  border-color: #F17228;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(241, 114, 40, 0.15);
+}
+
+.search-close-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #F5F5F5;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.search-close-btn:hover {
+  background: #FFECE8;
+  color: #F17228;
+}
+
+/* RESPONSIVE*/
+
+@media (max-width: 992px) {
+  .location {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .location b {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .logo img {
+    height: 36px;
+  }
+
+  .search-btn span {
+    display: none;
+  }
+
+  .search-btn {
+    padding: 8px;
+    background: #F8F9FA;
+    border-radius: 50%;
+  }
+
+  .login-btn {
+    height: 40px;
+    padding: 0 14px;
+    font-size: 13px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    height: 64px;
+  }
+
+  .navbar-container {
+    padding: 0 10px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .search-btn {
+    padding: 6px;
+  }
+
+  .login-btn {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 12px;
+    gap: 4px;
+    border-radius: 8px;
+  }
+
+  .navbar-search-box {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .navbar-search-box input {
+    height: 38px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .search-close-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}

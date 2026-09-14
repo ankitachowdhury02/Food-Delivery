@@ -1,0 +1,315 @@
+
+
+.featured-restaurants {
+  width: 100%;
+  padding: 85px 20px;
+  background: #FFFFFF;
+}
+
+.restaurant-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+  row-gap: 36px;
+}
+
+.restaurant-card {
+  width: 100%;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+}
+
+.restaurant-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  outline: none;
+}
+
+.restaurant-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.restaurant-card:hover .restaurant-image > img {
+  transform: scale(1.05);
+}
+
+/* Badges Container */
+.restaurant-badges {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  transition: opacity 0.25s ease;
+}
+
+.discount-badge {
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  background: #F17228;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.fast-badge {
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  background: #FFB30E;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Restaurant Info */
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.restaurant-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 4px;
+}
+
+.restaurant-details {
+  min-width: 0;
+}
+
+.restaurant-details h3 {
+  font-family: 'Source Sans 3', 'Source Sans Pro', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #FFB30E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.star {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Status Pill */
+.restaurant-status {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 14px;
+  border-radius: 12px;
+  background: #FEECE5;
+  color: #F17228;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.restaurant-status.open {
+  background: #E8F7E4;
+  color: #4BA23F;
+}
+
+/* Restaurant Description Overlay */
+.restaurant-description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 15px;
+  background: rgba(0, 0, 0, 0.80);
+  color: white;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.restaurant-description h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.restaurant-description p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: white;
+}
+
+.restaurant-image:hover .restaurant-description {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.restaurant-description.description-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* View All Button */
+.view-all-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 55px;
+}
+
+.view-all-btn {
+  height: 48px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: #FFB30E;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(255, 179, 14, 0.35);
+  transition: all 0.25s ease;
+}
+
+.view-all-btn:hover {
+  transform: translateY(-2px);
+  background: #FFA100;
+  box-shadow: 0 10px 26px rgba(255, 179, 14, 0.45);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .restaurant-grid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .restaurant-image {
+    height: 190px;
+  }
+}
+
+@media (max-width: 420px) {
+  .restaurant-card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .featured-restaurants {
+    padding: 35px 10px;
+  }
+
+  .restaurant-grid {
+    max-width: 280px;
+    gap: 20px;
+  }
+
+  .restaurant-image {
+    height: 160px;
+    border-radius: 12px;
+  }
+
+  .restaurant-badges {
+    top: 8px;
+    left: 8px;
+    gap: 4px;
+  }
+
+  .discount-badge,
+  .fast-badge {
+    height: 22px;
+    padding: 0 7px;
+    font-size: 10px;
+  }
+
+  .restaurant-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+
+  .restaurant-details h3 {
+    font-size: 15.5px;
+  }
+
+  .rating {
+    font-size: 13px;
+  }
+
+  .restaurant-status {
+    margin-top: 8px;
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .view-all-container {
+    margin-top: 25px;
+  }
+
+  .view-all-btn {
+    height: 40px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+}
