@@ -12,7 +12,7 @@ import food8 from "../assets/Rfood7.png";
 import logo1 from "../assets/Friends.png";
 import logo2 from "../assets/PizzaPino.png";
 import logo3 from "../assets/Dunkin.png";
-import logo4 from "../assets/Subway.png";
+import logo4 from "../assets/subway.png";
 import logo5 from "../assets/Ruby.png";
 import logo6 from "../assets/KFC.png";
 import logo7 from "../assets/RedSquare.png";
