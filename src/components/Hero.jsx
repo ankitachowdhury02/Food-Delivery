@@ -6,15 +6,14 @@ function Hero() {
   // Delivery / Pickup active er jnno
   const [deliveryType, setDeliveryType] = useState("delivery");
 
-  // Address input-এর value রাখবে
   const [address, setAddress] = useState("");
 
-  // Find Food button click je function use hoy66
+  
   const handleFindFood = (e) => {
     e.preventDefault();
 
     if (address.trim() === "") {
-      // alert("Please enter your address");
+     
       return;
     }
 
