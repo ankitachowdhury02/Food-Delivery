@@ -28,14 +28,14 @@ const foods = [
   },
   {
     image: sandwich,
-    name: "Crispy Sandwich",
+    name: "Crispy Sandwitch",
     restaurant: "Fastfood Dine",
     price: "$3.00",
   },
   {
     image: soup,
     name: "Thai Soup",
-    restaurant: "Food town",
+    restaurant: "Foody man",
     price: "$2.79",
   },
 ];

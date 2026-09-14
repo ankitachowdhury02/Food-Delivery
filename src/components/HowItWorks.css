@@ -1,13 +1,13 @@
 .how-it-works {
   width: 100%;
-  padding: 85px 20px;
-  background: #fef9f0;
+  padding: 60px 20px 40px;
+  background: linear-gradient(180deg, #fff9f0 0%, #ffffff 100%);
   text-align: center;
 }
 
 .how-it-works .section-title {
   color: #f17228;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 
 .steps-container {
@@ -16,7 +16,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  gap: 28px;
 }
 
 .step {
@@ -25,29 +25,29 @@
 }
 
 .step-icon {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 22px;
+  height: 90px;
+  margin: 0 auto 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 10px 28px rgba(255, 179, 14, 0.16);
-  transition:
-    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.3s ease;
-}
-
-.step:hover .step-icon {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 34px rgba(255, 179, 14, 0.28);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .step-icon img {
-  width: 52px;
-  height: 52px;
+  height: 84px;
+  width: auto;
+  max-width: 88px;
   object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(255, 179, 14, 0.25));
+  transition: all 0.3s ease;
+}
+
+.step:hover .step-icon img {
+  transform: translateY(-4px) scale(1.04);
+  filter: drop-shadow(0 12px 22px rgba(255, 179, 14, 0.38));
 }
 
 .step h3 {
@@ -58,16 +58,16 @@
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   color: #212529;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .step p {
   font-size: 14px;
   color: #757575;
-  line-height: 1.6;
+  line-height: 1.55;
   max-width: 220px;
   margin: 0 auto;
 }
@@ -103,14 +103,13 @@
   }
 
   .step-icon {
-    width: 68px;
-    height: 68px;
-    margin: 0 auto 12px;
+    height: 70px;
+    margin: 0 auto 10px;
   }
 
   .step-icon img {
-    width: 36px;
-    height: 36px;
+    height: 64px;
+    width: auto;
   }
 
   .step h3 {

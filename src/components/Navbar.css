@@ -208,15 +208,27 @@
 
 @media (max-width: 576px) {
   .navbar {
-    height: 70px;
+    height: 66px;
   }
 
   .navbar-container {
-    padding: 0 16px;
+    padding: 0 14px;
+  }
+
+  .logo {
+    min-width: 0;
+    flex-shrink: 1;
   }
 
   .logo img {
-    height: 36px;
+    height: 26px;
+    max-width: 160px;
+    width: auto;
+  }
+
+  .nav-right {
+    gap: 10px;
+    flex-shrink: 0;
   }
 
   .search-btn span {
@@ -224,62 +236,123 @@
   }
 
   .search-btn {
-    padding: 8px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #f8f9fa;
     border-radius: 50%;
+    flex-shrink: 0;
   }
 
   .login-btn {
-    height: 40px;
+    height: 38px;
     padding: 0 14px;
     font-size: 13px;
     gap: 6px;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 }
 
 @media (max-width: 360px) {
   .navbar {
-    height: 64px;
+    height: 60px;
   }
 
   .navbar-container {
     padding: 0 10px;
+    gap: 8px;
   }
 
   .logo img {
-    height: 30px;
+    height: 22px;
+    max-width: 130px;
   }
 
   .nav-right {
     gap: 8px;
+    flex-shrink: 0;
   }
 
   .search-btn {
-    padding: 6px;
+    width: 32px;
+    height: 32px;
   }
 
   .login-btn {
-    height: 35px;
+    height: 34px;
     padding: 0 10px;
     font-size: 12px;
     gap: 4px;
-    border-radius: 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .navbar-search-box {
-    padding: 10px 12px;
-    gap: 8px;
+    padding: 8px 10px;
+    gap: 6px;
   }
 
   .navbar-search-box input {
-    height: 38px;
-    font-size: 13px;
-    padding: 0 10px;
+    height: 36px;
+    font-size: 12px;
+    padding: 0 8px;
   }
 
   .search-close-btn {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     font-size: 12px;
+  }
+}
+
+/* Mobile S (320px) */
+@media (max-width: 330px) {
+  .navbar {
+    height: 54px;
+  }
+
+  .navbar-container {
+    padding: 0 8px;
+    gap: 6px;
+  }
+
+  .logo img {
+    height: 19px;
+    max-width: 110px;
+  }
+
+  .nav-right {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .search-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .search-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .login-btn {
+    height: 30px;
+    padding: 0 8px;
+    font-size: 11px;
+    gap: 3px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .login-btn svg {
+    width: 13px;
+    height: 13px;
   }
 }

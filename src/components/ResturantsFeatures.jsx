@@ -58,7 +58,7 @@ const restaurants = [
     image: food4,
     logo: logo4,
     discount: "15% off",
-    name: "Subway",
+    name: "Donuts hut",
     rating: "50",
     status: "Open Now",
     open: true,

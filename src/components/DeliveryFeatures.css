@@ -98,24 +98,23 @@
 .store-buttons {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  margin-top: 14px;
 }
 
 .store-buttons img {
-  height: 48px;
+  height: 52px;
   width: auto;
   object-fit: contain;
   cursor: pointer;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  box-shadow: 0 10px 24px rgba(255, 179, 14, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .store-buttons img:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 14px 28px rgba(255, 179, 14, 0.45);
 }
 
 /* RESPONSIVE section*/
@@ -136,6 +135,10 @@
 
   .app-content h2 {
     font-size: 34px;
+  }
+
+  .store-buttons img {
+    height: 48px;
   }
 }
 
@@ -180,6 +183,17 @@
 
   .store-buttons {
     justify-content: center;
+    gap: 12px;
+  }
+
+  .store-buttons img {
+    height: 46px;
+  }
+}
+
+@media (max-width: 576px) {
+  .store-buttons img {
+    height: 42px;
   }
 }
 
@@ -230,13 +244,25 @@
   }
 
   .store-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
   }
 
   .store-buttons img {
-    height: 36px;
-    max-width: 160px;
+    height: 38px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 330px) {
+  .store-buttons {
+    gap: 6px;
+  }
+
+  .store-buttons img {
+    height: 34px;
   }
 }

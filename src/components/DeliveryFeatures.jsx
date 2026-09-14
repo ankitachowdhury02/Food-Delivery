@@ -3,8 +3,8 @@ import trackingIcon from "../assets/Livelocation.png";
 import deliveryIcon from "../assets/Quick Delivery.png";
 
 import appImage from "../assets/app.png";
-import googlePlay from "../assets/Google Play logo.png";
-import appStore from "../assets/Apple logo.png";
+import googlePlay from "../assets/google-play.svg";
+import appStore from "../assets/app-store.svg";
 import "./DeliveryFeatures.css";
 
 function DeliveryFeatures() {
