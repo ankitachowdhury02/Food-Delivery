@@ -3,7 +3,6 @@ import chicken from "../assets/momo.png";
 import pizza from "../assets/pizzamiddle.png";
 import "./Middle.css";
 
-
 const offers = [
   {
     image: sandwich,
@@ -22,7 +21,6 @@ const offers = [
     reverse: false,
   },
 
-
   {
     image: chicken,
 
@@ -40,15 +38,13 @@ const offers = [
     reverse: true,
   },
 
-
   {
     image: pizza,
 
     title: (
       <>
         Wanna eat hot
-        <br />
-        & spicy <span>Pizza?</span>
+        <br />& spicy <span>Pizza?</span>
       </>
     ),
 
@@ -59,58 +55,33 @@ const offers = [
   },
 ];
 
-
-
 function SpecialOffers() {
-
-
   // Proceed to Order section suru
 
   const handleProceed = () => {
-
     const popularSection = document.querySelector(".popular");
 
     if (popularSection) {
-
       popularSection.scrollIntoView({
         behavior: "smooth",
       });
-
     }
-
   };
 
-
   return (
-
     <section className="special-offers">
-
       <div className="special-offers-container">
-
-
         {offers.map((offer, index) => (
-
           <div
-            className={`special-offer-card ${
-              offer.reverse ? "reverse" : ""
-            }`}
+            className={`special-offer-card ${offer.reverse ? "reverse" : ""}`}
             key={index}
           >
-
-
             {/* Text er jnno section ta */}
 
             <div className="special-offer-content">
+              <h2>{offer.title}</h2>
 
-              <h2>
-                {offer.title}
-              </h2>
-
-
-              <p>
-                {offer.description}
-              </p>
-
+              <p>{offer.description}</p>
 
               {/* Proceed button kora jabe */}
 
@@ -119,11 +90,7 @@ function SpecialOffers() {
                 type="button"
                 onClick={handleProceed}
               >
-
-                <span>
-                  PROCEED TO ORDER
-                </span>
-
+                <span>PROCEED TO ORDER</span>
 
                 <svg
                   width="18"
@@ -135,39 +102,21 @@ function SpecialOffers() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-
                   <polyline points="9 18 15 12 9 6" />
-
                 </svg>
-
               </button>
-
             </div>
-
 
             {/* image er jnno */}
 
             <div className="special-offer-image">
-
-              <img
-                src={offer.image}
-                alt="Food offer"
-              />
-
+              <img src={offer.image} alt="Food offer" />
             </div>
-
-
           </div>
-
         ))}
-
-
       </div>
-
     </section>
-
   );
 }
-
 
 export default SpecialOffers;

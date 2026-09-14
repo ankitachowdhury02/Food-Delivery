@@ -1,6 +1,3 @@
-/*FOOTER*/
-
-/* CTA Section */
 .footer-cta {
   position: relative;
   width: 100%;
@@ -72,7 +69,6 @@
   transform: translateX(3px);
 }
 
-/* Main Footer  */
 .footer-main {
   width: 100%;
   background: #202020;
@@ -87,7 +83,6 @@
   box-sizing: border-box;
 }
 
-/* Top Cities */
 .footer-cities h3 {
   margin: 0 0 25px;
   font-size: 15px;
@@ -113,7 +108,6 @@
   cursor: pointer;
 }
 
-/* Divider */
 .footer-divider {
   width: 100%;
   height: 1px;
@@ -121,7 +115,6 @@
   margin: 45px 0 38px;
 }
 
-/* Footer Links */
 .footer-links-area {
   display: grid;
   grid-template-columns: 120px 120px 220px 1fr;
@@ -146,7 +139,6 @@
   color: white;
 }
 
-/* Social Media */
 .footer-social {
   padding-left: 20px;
 }
@@ -188,7 +180,7 @@
   transform: translateY(-2px);
 }
 
-/* Subscribe */
+/* Subscribe Section */
 .subscribe-title {
   margin: 0 0 20px;
   font-size: 12px;
@@ -252,7 +244,6 @@
   transform: translateY(-2px);
 }
 
-/* Footer Bottom */
 .bottom-divider {
   margin: 35px 0 12px;
 }
@@ -285,7 +276,7 @@
   vertical-align: middle;
 }
 
-/*FOOTER RESPONSIVE */
+/*Footer Responsive */
 
 @media (max-width: 992px) {
   .cities-grid {

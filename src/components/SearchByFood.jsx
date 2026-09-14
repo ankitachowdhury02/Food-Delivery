@@ -8,7 +8,6 @@ import chowmein from "../assets/chowmin.png";
 import steak from "../assets/steak.png";
 import "./SearchByFood.css";
 
-
 const foods = [
   {
     image: pizza,
@@ -36,103 +35,59 @@ const foods = [
   },
 ];
 
-
 function SearchByFood({ searchFood = "" }) {
-
-  // Food container-এর reference
   const containerRef = useRef(null);
 
-  // কোন food select করা হয়েছে
   const [selectedFood, setSelectedFood] = useState(null);
 
-  // View All click করার জন্য
   const [showAll, setShowAll] = useState(false);
 
-
- 
-
   const scroll = (direction) => {
-
     if (containerRef.current) {
-
       const scrollAmount = 200;
 
       containerRef.current.scrollBy({
-        left:
-          direction === "left"
-            ? -scrollAmount
-            : scrollAmount,
+        left: direction === "left" ? -scrollAmount : scrollAmount,
 
         behavior: "smooth",
       });
     }
   };
 
-
-
-
   const handleFoodClick = (food) => {
-
     setSelectedFood(food);
-
-  
   };
 
-
   const handleViewAll = () => {
-
     setShowAll(!showAll);
 
     if (!showAll && containerRef.current) {
-
       containerRef.current.scrollTo({
         left: 0,
         behavior: "smooth",
       });
-
     }
   };
 
-
-
   const searchText = searchFood.trim().toLowerCase();
 
-
-  // Search-এর সাথে match করা food
+  // Search er sthe match food
   const matchedFood = foods.find((food) =>
-    food.name.toLowerCase().includes(searchText)
+    food.name.toLowerCase().includes(searchText),
   );
 
-
   return (
-
     <section className="search-by-food">
-
-
-      
-
       <div className="search-food-header">
-
-        <h2 className="section-title">
-          Search by Food
-        </h2>
-
+        <h2 className="section-title">Search by Food</h2>
 
         <div className="search-food-right">
-
-
-          
-
           <button
             className="view-food-btn"
             type="button"
             onClick={handleViewAll}
           >
-
-            <span>
-              {showAll ? "Show Less" : "View All"}
-            </span>
-
+            <span>{showAll ? "Show Less" : "View All"}</span>
 
             <svg
               width="16"
@@ -142,15 +97,9 @@ function SearchByFood({ searchFood = "" }) {
               stroke="currentColor"
               strokeWidth="2.5"
             >
-
               <polyline points="9 18 15 12 9 6" />
-
             </svg>
-
           </button>
-
-
-       
 
           <button
             className="food-arrow"
@@ -158,7 +107,6 @@ function SearchByFood({ searchFood = "" }) {
             aria-label="Previous foods"
             type="button"
           >
-
             <svg
               width="20"
               height="20"
@@ -169,13 +117,9 @@ function SearchByFood({ searchFood = "" }) {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-
               <polyline points="15 18 9 12 15 6" />
-
             </svg>
-
           </button>
-
 
           <button
             className="food-arrow"
@@ -183,7 +127,6 @@ function SearchByFood({ searchFood = "" }) {
             aria-label="Next foods"
             type="button"
           >
-
             <svg
               width="20"
               height="20"
@@ -194,57 +137,30 @@ function SearchByFood({ searchFood = "" }) {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-
               <polyline points="9 18 15 12 9 6" />
-
             </svg>
-
           </button>
-
-
         </div>
-
       </div>
 
-
-      
-
       {searchText && !matchedFood && (
-
         <div className="no-food-found">
+          <h3>No items found</h3>
 
-          <h3>
-            No items found
-          </h3>
-
-          <p>
-            We couldn't find "{searchFood}"
-          </p>
-
+          <p>We couldn't find "{searchFood}"</p>
         </div>
-
       )}
-
 
       {/*  Food Categories Section  */}
 
       {(!searchText || matchedFood) && (
-
-        <div
-          className="food-category-container"
-          ref={containerRef}
-        >
-
+        <div className="food-category-container" ref={containerRef}>
           {foods.map((food, index) => {
-
-            // এই food search-এর সাথে match করছে কিনা
+            // Search food er sthe mnatch
             const isHighlighted =
-              searchText &&
-              food.name.toLowerCase().includes(searchText);
-
+              searchText && food.name.toLowerCase().includes(searchText);
 
             return (
-
               <div
                 className={`food-category ${
                   isHighlighted ? "food-highlight" : ""
@@ -252,57 +168,28 @@ function SearchByFood({ searchFood = "" }) {
                 key={index}
                 onClick={() => handleFoodClick(food)}
               >
-
                 <div className="food-category-image">
-
-                  <img
-                    src={food.image}
-                    alt={food.name}
-                  />
-
+                  <img src={food.image} alt={food.name} />
                 </div>
 
-
-                <h3 className="food-category-name">
-                  {food.name}
-                </h3>
-
+                <h3 className="food-category-name">{food.name}</h3>
               </div>
-
             );
-
           })}
-
         </div>
-
       )}
-
 
       {/* Food Select ert jnno */}
 
       {selectedFood && (
-
         <div className="selected-food">
-
           <p>
-
-            Selected Food:{" "}
-
-            <strong>
-              {selectedFood.name}
-            </strong>
-
+            Selected Food: <strong>{selectedFood.name}</strong>
           </p>
-
         </div>
-
       )}
-
-
     </section>
-
   );
 }
-
 
 export default SearchByFood;

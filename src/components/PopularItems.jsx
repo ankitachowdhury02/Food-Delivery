@@ -7,9 +7,6 @@ import soup from "../assets/soup.png";
 import dancake from "../assets/dancake.png";
 import "./PopularItems.css";
 
-
-// ================= FOOD DATA =================
-
 const foods = [
   {
     image: burger,
@@ -43,9 +40,6 @@ const foods = [
   },
 ];
 
-
-// ================= LOCATION ICON =================
-
 function LocationIcon() {
   return (
     <svg
@@ -60,41 +54,22 @@ function LocationIcon() {
         fill="#FFB30E"
       />
 
-      <circle
-        cx="12"
-        cy="9"
-        r="2.5"
-        fill="white"
-      />
+      <circle cx="12" cy="9" r="2.5" fill="white" />
     </svg>
   );
 }
 
-
-// ================= POPULAR ITEMS =================
-
 function PopularItems() {
-
-  // Arrow-এর জন্য reference
   const containerRef = useRef(null);
 
-  // কোন food select করা হয়েছে
   const [selectedFood, setSelectedFood] = useState(null);
 
-
-  // ================= SCROLL FUNCTION =================
-
   const scroll = (direction) => {
-
     if (containerRef.current) {
-
       const scrollAmount = 260;
 
       containerRef.current.scrollBy({
-        left:
-          direction === "left"
-            ? -scrollAmount
-            : scrollAmount,
+        left: direction === "left" ? -scrollAmount : scrollAmount,
 
         behavior: "smooth",
       });
@@ -104,27 +79,16 @@ function PopularItems() {
   /* Order Fuc er jnno */
 
   const handleOrder = (food) => {
-
     setSelectedFood(food);
-
-    
   };
 
-
   return (
-
     <section className="popular">
-
       {/* Section Title */}
 
-      <h2 className="section-title">
-        Popular Items
-      </h2>
-
+      <h2 className="section-title">Popular Items</h2>
 
       <div className="popular-wrapper">
-
-
         {/* Left Arrow Section */}
 
         <button
@@ -133,7 +97,6 @@ function PopularItems() {
           aria-label="Scroll left"
           type="button"
         >
-
           <svg
             width="20"
             height="20"
@@ -146,68 +109,37 @@ function PopularItems() {
           >
             <polyline points="15 18 9 12 15 6" />
           </svg>
-
         </button>
-
 
         {/* Food Items Section */}
 
-        <div
-          className="items-container"
-          ref={containerRef}
-        >
-
+        <div className="items-container" ref={containerRef}>
           {foods.map((food, index) => (
-
-            <div
-              key={index}
-              className="item-card"
-            >
-
-
+            <div key={index} className="item-card">
               {/* Food Image */}
 
               <div className="item-image-wrapper">
-
-                <img
-                  src={food.image}
-                  alt={food.name}
-                />
-
+                <img src={food.image} alt={food.name} />
               </div>
-
 
               {/* Food Details */}
 
               <div className="item-details">
-
-
                 {/* Food Name */}
 
-                <h3 className="item-name">
-                  {food.name}
-                </h3>
-
+                <h3 className="item-name">{food.name}</h3>
 
                 {/* Restaurant */}
 
                 <p className="item-restaurant">
-
                   <LocationIcon />
 
-                  <span>
-                    {food.restaurant}
-                  </span>
-
+                  <span>{food.restaurant}</span>
                 </p>
-
 
                 {/* Price */}
 
-                <p className="item-price">
-                  {food.price}
-                </p>
-
+                <p className="item-price">{food.price}</p>
 
                 {/* Order Button */}
 
@@ -218,16 +150,10 @@ function PopularItems() {
                 >
                   Order Now
                 </button>
-
-
               </div>
-
             </div>
-
           ))}
-
         </div>
-
 
         {/* Right Arrow Section */}
 
@@ -237,7 +163,6 @@ function PopularItems() {
           aria-label="Scroll right"
           type="button"
         >
-
           <svg
             width="20"
             height="20"
@@ -250,32 +175,19 @@ function PopularItems() {
           >
             <polyline points="9 18 15 12 9 6" />
           </svg>
-
         </button>
-
-
       </div>
-
 
       {/* Select Food Section */}
 
       {selectedFood && (
-
         <div className="selected-food">
-
           <p>
-            Selected:{" "}
-            <strong>
-              {selectedFood.name}
-            </strong>
+            Selected: <strong>{selectedFood.name}</strong>
           </p>
-
         </div>
-
       )}
-
     </section>
-
   );
 }
 

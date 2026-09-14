@@ -1,14 +1,12 @@
-/* HOW DOES IT WORK*/
-
 .how-it-works {
   width: 100%;
   padding: 85px 20px;
-  background: #FEF9F0;
+  background: #fef9f0;
   text-align: center;
 }
 
 .how-it-works .section-title {
-  color: #F17228;
+  color: #f17228;
   margin-bottom: 60px;
 }
 
@@ -36,7 +34,9 @@
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 10px 28px rgba(255, 179, 14, 0.16);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease;
 }
 
 .step:hover .step-icon {
@@ -51,7 +51,13 @@
 }
 
 .step h3 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Source Sans 3",
+    "Source Sans Pro",
+    "Poppins",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #212529;
@@ -66,7 +72,7 @@
   margin: 0 auto;
 }
 
-                          /* RESPONSIVE*/
+/* RESPONSIVE*/
 
 @media (max-width: 1200px) {
   .steps-container {

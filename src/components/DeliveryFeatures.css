@@ -1,13 +1,10 @@
-/*DELIVERY FEATURES & INSTALL APP*/
-
 .delivery-features {
   width: 100%;
   padding: 60px 20px 0;
-  background: #FFF0D6;
+  background: #fff0d6;
   overflow: hidden;
 }
 
-/* Features Floating Box */
 .features-box {
   width: 100%;
   max-width: 1000px;
@@ -37,8 +34,8 @@
 }
 
 .feature-item h3 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', 'Poppins',  sans-serif;
-  color: #F17228;
+  font-family: "Source Sans 3", "Source Sans Pro", "Poppins", sans-serif;
+  color: #f17228;
   font-size: 22px;
   font-weight: 800;
   line-height: 1.25;
@@ -47,11 +44,10 @@
 .feature-divider {
   width: 1px;
   height: 60px;
-  background: #E0E0E0;
+  background: #e0e0e0;
   margin: 0 24px;
 }
 
-/* Install App section */
 .install-app {
   width: 100%;
   max-width: 1100px;
@@ -83,8 +79,8 @@
 }
 
 .app-content h2 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', 'Poppins', sans-serif;
-  color: #FFA100;
+  font-family: "Source Sans 3", "Source Sans Pro", "Poppins", sans-serif;
+  color: #ffa100;
   font-size: 44px;
   font-weight: 800;
   line-height: 1.15;
@@ -112,7 +108,9 @@
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .store-buttons img:hover {

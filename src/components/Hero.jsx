@@ -3,61 +3,41 @@ import ramen from "../assets/food.png";
 import "./Hero.css";
 
 function Hero() {
-  // Delivery / Pickup কোনটা active সেটা রাখবে
+  // Delivery / Pickup active er jnno
   const [deliveryType, setDeliveryType] = useState("delivery");
 
   // Address input-এর value রাখবে
   const [address, setAddress] = useState("");
 
-  // Find Food button click করলে এই function চলবে
+  // Find Food button click je function use hoy66
   const handleFindFood = (e) => {
     e.preventDefault();
 
-    // যদি address না লেখা হয়
     if (address.trim() === "") {
-     // alert("Please enter your address");
+      // alert("Please enter your address");
       return;
     }
 
-    // Address লেখা থাকলে
     // alert(
-     // `Finding ${deliveryType} food near ${address}`
-   // );
+    // `Finding ${deliveryType} food near ${address}`
+    // );
   };
 
   return (
     <section className="hero">
-
       <div className="hero-content">
-
-        {/*LEFT CONTENT*/}
         <div className="hero-text">
-
           <h1>Are you starving?</h1>
 
-          <p>
-            Within a few clicks, find meals that are accessible near you
-          </p>
+          <p>Within a few clicks, find meals that are accessible near you</p>
 
-
-          {/*SEARCH CARD*/}
           <div className="food-search">
-
-
-            {/*  DELIVERY / PICKUP  */}
             <div className="delivery-tabs">
-
-              {/* Delivery Button */}
               <button
                 type="button"
-                className={
-                  deliveryType === "delivery"
-                    ? "active-tab"
-                    : ""
-                }
+                className={deliveryType === "delivery" ? "active-tab" : ""}
                 onClick={() => setDeliveryType("delivery")}
               >
-
                 <svg
                   width="18"
                   height="18"
@@ -68,21 +48,14 @@ function Hero() {
                 </svg>
 
                 <span>Delivery</span>
-
               </button>
 
-
-              {/* Pickup Button */}
+              {/* Pickup Button use */}
               <button
                 type="button"
-                className={
-                  deliveryType === "pickup"
-                    ? "active-tab"
-                    : ""
-                }
+                className={deliveryType === "pickup" ? "active-tab" : ""}
                 onClick={() => setDeliveryType("pickup")}
               >
-
                 <svg
                   width="18"
                   height="18"
@@ -93,21 +66,12 @@ function Hero() {
                 </svg>
 
                 <span>Pickup</span>
-
               </button>
-
             </div>
 
-
-            {/* ADDRESS SEARCH*/}
-            <form
-              className="search-area"
-              onSubmit={handleFindFood}
-            >
-
-              {/* Address Input */}
+            <form className="search-area" onSubmit={handleFindFood}>
+              {/* Address er jnno */}
               <div className="search-input-box">
-
                 <svg
                   className="input-location-icon"
                   width="18"
@@ -120,15 +84,8 @@ function Hero() {
                     fill="#FF642F"
                   />
 
-                  <circle
-                    cx="12"
-                    cy="9"
-                    r="2.5"
-                    fill="white"
-                  />
-
+                  <circle cx="12" cy="9" r="2.5" fill="white" />
                 </svg>
-
 
                 <input
                   type="text"
@@ -137,16 +94,10 @@ function Hero() {
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                 />
-
               </div>
 
-
-              {/* Find Food Button */}
-              <button
-                className="find-food"
-                type="submit"
-              >
-
+              {/* Food Button khojar jnno */}
+              <button className="find-food" type="submit">
                 <svg
                   width="16"
                   height="16"
@@ -155,42 +106,22 @@ function Hero() {
                   stroke="currentColor"
                   strokeWidth="2.5"
                 >
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="6.5"
-                  />
+                  <circle cx="11" cy="11" r="6.5" />
 
-                  <path
-                    d="M16 16L21 21"
-                    strokeLinecap="round"
-                  />
-
+                  <path d="M16 16L21 21" strokeLinecap="round" />
                 </svg>
 
                 <span>Find Food</span>
-
               </button>
-
             </form>
-
           </div>
-
         </div>
 
-
-        {/*FOOD IMAGE */}
+        {/*For food img */}
         <div className="hero-image">
-
-          <img
-            src={ramen}
-            alt="Delicious meal bowl"
-          />
-
+          <img src={ramen} alt="Delicious meal bowl" />
         </div>
-
       </div>
-
     </section>
   );
 }

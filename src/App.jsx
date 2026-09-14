@@ -12,56 +12,29 @@ import SpecialOffers from "./components/Middle";
 import Footer from "./components/Footer";
 
 function App() {
-
-  // Navbar থেকে যে food search করা হবে
   const [searchFood, setSearchFood] = useState("");
-
 
   return (
     <div>
+      <Navbar searchFood={searchFood} setSearchFood={setSearchFood} />
 
-      {/* Navbar */}
-      <Navbar
-        searchFood={searchFood}
-        setSearchFood={setSearchFood}
-      />
-
-
-      {/* Hero */}
       <Hero />
 
-
-      {/* Offers */}
       <Offers />
 
-
-      {/* How It Works */}
       <HowItWorks />
 
-
-      {/* Popular Items */}
       <PopularItems />
 
-
-      {/* Restaurants */}
       <ResturantsFeatures />
 
+      <SearchByFood searchFood={searchFood} />
 
-      {/* Search By Food */}
-      <SearchByFood
-        searchFood={searchFood}
-      />
-
-
-      {/* Delivery Features */}
       <DeliveryFeatures />
 
-
-      {/* Special Offers */}
       <SpecialOffers />
 
       <Footer />
-
     </div>
   );
 }

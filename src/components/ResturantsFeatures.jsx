@@ -19,9 +19,6 @@ import logo7 from "../assets/RedSquare.png";
 import logo8 from "../assets/Taco Bell.png";
 import "./ResturantsFeatures.css";
 
-
-/* ================= RESTAURANTS DATA ================= */
-
 const restaurants = [
   {
     image: food1,
@@ -31,8 +28,7 @@ const restaurants = [
     rating: "46",
     status: "Opens tomorrow",
     open: false,
-    description:
-      "Fresh and delicious meals prepared with quality ingredients.",
+    description: "Fresh and delicious meals prepared with quality ingredients.",
   },
 
   {
@@ -43,8 +39,7 @@ const restaurants = [
     rating: "40",
     status: "Opens tomorrow",
     open: false,
-    description:
-      "Hot and cheesy pizzas with a variety of delicious toppings.",
+    description: "Hot and cheesy pizzas with a variety of delicious toppings.",
   },
 
   {
@@ -91,8 +86,7 @@ const restaurants = [
     rating: "53",
     status: "Open Now",
     open: true,
-    description:
-      "Crispy fried chicken with delicious flavors and tasty sides.",
+    description: "Crispy fried chicken with delicious flavors and tasty sides.",
   },
 
   {
@@ -120,50 +114,20 @@ const restaurants = [
   },
 ];
 
-
-/* ================= TAG ICON ================= */
-
 function TagIcon() {
   return (
-    <svg
-      width="13"
-      height="13"
-      viewBox="0 0 24 24"
-      fill="none"
-    >
-      <path
-        d="M20 13L13 20L4 11V4H11L20 13Z"
-        fill="currentColor"
-      />
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+      <path d="M20 13L13 20L4 11V4H11L20 13Z" fill="currentColor" />
 
-      <circle
-        cx="8"
-        cy="8"
-        r="1.5"
-        fill="white"
-      />
+      <circle cx="8" cy="8" r="1.5" fill="white" />
     </svg>
   );
 }
 
-
-/* ================= CLOCK ICON ================= */
-
 function ClockIcon() {
   return (
-    <svg
-      width="13"
-      height="13"
-      viewBox="0 0 24 24"
-      fill="none"
-    >
-      <circle
-        cx="12"
-        cy="12"
-        r="9"
-        stroke="currentColor"
-        strokeWidth="2"
-      />
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
 
       <path
         d="M12 7V12L15 14"
@@ -175,223 +139,95 @@ function ClockIcon() {
   );
 }
 
-
-/* ================= MAIN COMPONENT ================= */
-
 function ResturantsFeatures() {
-
-  /* কোন restaurant-এর description open */
   const [activeRestaurant, setActiveRestaurant] = useState(null);
 
-
-  /* View All state */
   const [showAll, setShowAll] = useState(false);
 
-
-  /* ================= IMAGE CLICK ================= */
-
   const handleImageClick = (index) => {
-
     if (activeRestaurant === index) {
-
-      // আবার click করলে close
       setActiveRestaurant(null);
-
     } else {
-
-      // নতুন restaurant-এর description open
       setActiveRestaurant(index);
-
     }
   };
 
-
-  /* ================= VIEW ALL ================= */
-
   const handleViewAll = () => {
-
     setShowAll(!showAll);
-
   };
 
-
-  /* প্রথমে 4টা, View All করলে 8টা */
-  const visibleRestaurants = showAll
-    ? restaurants
-    : restaurants.slice(0, 4);
-
+  const visibleRestaurants = showAll ? restaurants : restaurants.slice(0, 4);
 
   return (
-
     <section className="featured-restaurants">
-
-
-      {/* ================= TITLE ================= */}
-
-      <h2 className="section-title">
-        Featured Restaurants
-      </h2>
-
-
-      {/* ================= RESTAURANT GRID ================= */}
+      <h2 className="section-title">Featured Restaurants</h2>
 
       <div className="restaurant-grid">
-
         {visibleRestaurants.map((restaurant, index) => (
-
-          <div
-            className="restaurant-card"
-            key={index}
-          >
-
-
-            {/* ================= FOOD IMAGE ================= */}
-
+          <div className="restaurant-card" key={index}>
             <div
               className="restaurant-image"
               onClick={() => handleImageClick(index)}
             >
-
-              <img
-                src={restaurant.image}
-                alt={restaurant.name}
-              />
-
-
-              {/* ================= DESCRIPTION ================= */}
+              <img src={restaurant.image} alt={restaurant.name} />
 
               <div
                 className={`restaurant-description ${
-                  activeRestaurant === index
-                    ? "description-active"
-                    : ""
+                  activeRestaurant === index ? "description-active" : ""
                 }`}
               >
+                <h4>{restaurant.name}</h4>
 
-                <h4>
-                  {restaurant.name}
-                </h4>
-
-                <p>
-                  {restaurant.description}
-                </p>
-
+                <p>{restaurant.description}</p>
               </div>
-
-
-              {/* ================= BADGES ================= */}
 
               <div className="restaurant-badges">
-
-
-                {/* Discount */}
-
                 <div className="discount-badge">
-
                   <TagIcon />
 
-                  <span>
-                    {restaurant.discount}
-                  </span>
-
+                  <span>{restaurant.discount}</span>
                 </div>
-
-
-                {/* Fast */}
 
                 <div className="fast-badge">
-
                   <ClockIcon />
 
-                  <span>
-                    Fast
-                  </span>
-
+                  <span>Fast</span>
                 </div>
-
-
               </div>
-
             </div>
 
-
-            {/* ================= RESTAURANT INFORMATION ================= */}
-
             <div className="restaurant-info">
-
-
-              {/* Restaurant Logo */}
-
               <img
                 className="restaurant-logo"
                 src={restaurant.logo}
                 alt={`${restaurant.name} logo`}
               />
 
-
-              {/* Details */}
-
               <div className="restaurant-details">
-
-                <h3>
-                  {restaurant.name}
-                </h3>
-
-
-                {/* Rating */}
+                <h3>{restaurant.name}</h3>
 
                 <p className="rating">
+                  <span className="star">★</span>
 
-                  <span className="star">
-                    ★
-                  </span>
-
-                  <span>
-                    {restaurant.rating}
-                  </span>
-
+                  <span>{restaurant.rating}</span>
                 </p>
-
               </div>
-
             </div>
-
-
 
             <div
               className={
-                restaurant.open
-                  ? "restaurant-status open"
-                  : "restaurant-status"
+                restaurant.open ? "restaurant-status open" : "restaurant-status"
               }
             >
-
               {restaurant.status}
-
             </div>
-
-
           </div>
-
         ))}
-
       </div>
 
-
-      {/*View Button Section */}
-
       <div className="view-all-container">
-
-        <button
-          className="view-all-btn"
-          type="button"
-          onClick={handleViewAll}
-        >
-
-          <span>
-            {showAll ? "Show Less" : "View All"}
-          </span>
-
+        <button className="view-all-btn" type="button" onClick={handleViewAll}>
+          <span>{showAll ? "Show Less" : "View All"}</span>
 
           <svg
             width="16"
@@ -401,21 +237,12 @@ function ResturantsFeatures() {
             stroke="currentColor"
             strokeWidth="2.5"
           >
-
-            <polyline
-              points="9 18 15 12 9 6"
-            />
-
+            <polyline points="9 18 15 12 9 6" />
           </svg>
-
         </button>
-
       </div>
-
-
     </section>
   );
 }
-
 
 export default ResturantsFeatures;

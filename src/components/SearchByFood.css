@@ -1,8 +1,7 @@
-
 .search-by-food {
   width: 100%;
   padding: 85px 20px;
-  background: #FEF9F0;
+  background: #fef9f0;
 }
 
 .search-food-header {
@@ -30,14 +29,14 @@
   align-items: center;
   gap: 6px;
   background: transparent;
-  color: #FFA100;
+  color: #ffa100;
   font-size: 15px;
   font-weight: 700;
   transition: color 0.2s ease;
 }
 
 .view-food-btn:hover {
-  color: #F17228;
+  color: #f17228;
 }
 
 .food-arrow {
@@ -47,7 +46,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #FFB30E;
+  background: #ffb30e;
   color: #ffffff;
   box-shadow: 0 8px 22px rgba(255, 179, 14, 0.35);
   transition: all 0.25s ease;
@@ -55,11 +54,10 @@
 
 .food-arrow:hover {
   transform: scale(1.08);
-  background: #FFA100;
+  background: #ffa100;
   box-shadow: 0 10px 24px rgba(255, 179, 14, 0.45);
 }
 
-/* Categories Grid */
 .food-category-container {
   width: 100%;
   max-width: 1200px;
@@ -117,17 +115,22 @@
 .food-category-name {
   margin-top: 18px;
   color: #212529;
-  font-family: 'Source Sans 3', 'Source Sans Pro', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Source Sans 3",
+    "Source Sans Pro",
+    "Poppins",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-size: 18px;
   font-weight: 700;
   transition: color 0.2s ease;
 }
 
 .food-category:hover .food-category-name {
-  color: #F17228;
+  color: #f17228;
 }
 
-/* Food Search Highlight */
 .food-highlight {
   border: 3px solid #ffb20e;
   border-radius: 50%;
@@ -150,7 +153,6 @@
   }
 }
 
-/* No Food Found */
 .no-food-found {
   width: 100%;
   text-align: center;

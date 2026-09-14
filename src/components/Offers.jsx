@@ -4,7 +4,6 @@ import food3 from "../assets/food3.png";
 import food4 from "../assets/food4.png";
 import "./Offers.css";
 
-
 const offers = [
   {
     image: food1,
@@ -38,11 +37,9 @@ function Offers() {
       <div className="offers-container">
         {offers.map((offer, index) => (
           <div className="offer-card" key={index}>
-            {/* Image Box */}
             <div className="offer-image">
               <img src={offer.image} alt={offer.title} />
-
-              {/* Figma Curved Discount Badge */}
+              {/*Curve er  jnno section ta */}
               <div className="discount-badge-banner">
                 <span className="discount-value">{offer.discount}</span>
                 <div className="discount-meta">
@@ -52,7 +49,6 @@ function Offers() {
               </div>
             </div>
 
-            {/* Offer Details */}
             <div className="offer-info">
               <h3 className="offer-title">{offer.title}</h3>
               <span className="remaining-pill">{offer.days}</span>
@@ -63,6 +59,5 @@ function Offers() {
     </section>
   );
 }
-
 
 export default Offers;

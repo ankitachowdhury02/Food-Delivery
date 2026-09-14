@@ -1,8 +1,7 @@
-
 .special-offers {
   width: 100%;
   padding: 85px 20px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .special-offers-container {
@@ -22,7 +21,9 @@
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .special-offer-card:hover {
@@ -44,7 +45,13 @@
 }
 
 .special-offer-content h2 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Source Sans 3",
+    "Source Sans Pro",
+    "Poppins",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-size: 34px;
   font-weight: 800;
   line-height: 1.25;
@@ -53,7 +60,7 @@
 }
 
 .special-offer-content h2 span {
-  color: #FFB30E;
+  color: #ffb30e;
 }
 
 .special-offer-content p {
@@ -71,7 +78,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(90deg, #FFB30E 0%, #FFA100 100%);
+  background: linear-gradient(90deg, #ffb30e 0%, #ffa100 100%);
   color: #ffffff;
   border-radius: 10px;
   font-size: 14px;
@@ -104,7 +111,7 @@
   transform: scale(1.04);
 }
 
-                     /* RESPONSIVE */
+/* RESPONSIVE */
 
 @media (max-width: 1200px) {
   .special-offers-container {
