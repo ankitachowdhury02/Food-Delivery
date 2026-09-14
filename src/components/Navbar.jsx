@@ -104,13 +104,8 @@ function Navbar({ searchFood, setSearchFood }) {
           {/*  LOGIN */}
 
           <button className="login-btn" type="button" onClick={handleLogin}>
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="8" r="3.5" fill="currentColor" />
-
-              <path
-                d="M5 21C5.7 16.7 8.1 14.5 12 14.5C15.9 14.5 18.3 16.7 19 21"
-                fill="currentColor"
-              />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
             </svg>
 
             <span>Login</span>
