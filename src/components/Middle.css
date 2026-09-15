@@ -72,20 +72,22 @@
 }
 
 .proceed-btn {
-  height: 48px;
-  padding: 0 28px;
+  height: 52px;
+  padding: 0 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   background: linear-gradient(90deg, #ffb30e 0%, #ffa100 100%);
   color: #ffffff;
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: 12px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.5px;
-  width: fit-content;
-  box-shadow: 0 8px 22px rgba(255, 179, 14, 0.35);
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 24px rgba(255, 179, 14, 0.35);
   transition: all 0.25s ease;
 }
 
@@ -164,9 +166,11 @@
 
   .proceed-btn {
     width: 100%;
+    max-width: 100%;
     justify-content: center;
-    height: 44px;
-    font-size: 13px;
+    height: 48px;
+    font-size: 14px;
+    border-radius: 10px;
   }
 }
 
@@ -204,9 +208,12 @@
   }
 
   .proceed-btn {
-    height: 38px;
-    font-size: 11px;
-    padding: 0 12px;
-    letter-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 46px;
+    font-size: 13px;
+    padding: 0 16px;
+    letter-spacing: 0.3px;
+    border-radius: 10px;
   }
 }
