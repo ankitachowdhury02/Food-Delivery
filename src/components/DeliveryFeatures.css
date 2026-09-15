@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  min-height: 120px;
   padding: 30px 45px;
   background: #ffffff;
   border-radius: 28px;
@@ -17,6 +18,7 @@
   justify-content: space-between;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
   transform: translateY(-30px);
+  box-sizing: border-box;
 }
 
 .feature-item {
@@ -121,12 +123,27 @@
 
 @media (max-width: 992px) {
   .features-box {
-    padding: 24px 28px;
+    padding: 22px 24px;
     transform: translateY(-20px);
+    gap: 12px;
+  }
+
+  .feature-item {
+    gap: 14px;
+  }
+
+  .feature-item img {
+    width: 54px;
+    height: 54px;
   }
 
   .feature-item h3 {
     font-size: 18px;
+  }
+
+  .feature-divider {
+    height: 48px;
+    margin: 0 14px;
   }
 
   .install-app {
@@ -144,21 +161,46 @@
 
 @media (max-width: 768px) {
   .features-box {
-    flex-direction: column;
-    gap: 20px;
-    transform: translateY(-15px);
-    padding: 24px 20px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 96px;
+    padding: 24px 18px;
     border-radius: 20px;
+    gap: 10px;
+    transform: translateY(-15px);
+    box-sizing: border-box;
   }
 
   .feature-divider {
-    display: none;
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: #e0e0e0;
+    margin: 0 8px;
+    flex-shrink: 0;
   }
 
   .feature-item {
-    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .feature-item img {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .feature-item h3 {
+    font-size: 15px;
+    line-height: 1.22;
+    margin: 0;
   }
 
   .install-app {
@@ -192,6 +234,52 @@
 }
 
 @media (max-width: 576px) {
+  .delivery-features {
+    padding: 35px 12px 0;
+  }
+
+  .features-box {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 88px;
+    padding: 22px 12px;
+    border-radius: 18px;
+    gap: 6px;
+    box-sizing: border-box;
+  }
+
+  .feature-divider {
+    display: block;
+    width: 1px;
+    height: 44px;
+    background: #e0e0e0;
+    margin: 0 4px;
+    flex-shrink: 0;
+  }
+
+  .feature-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .feature-item img {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .feature-item h3 {
+    font-size: 13.5px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
   .store-buttons img {
     height: 42px;
   }
@@ -199,29 +287,53 @@
 
 @media (max-width: 360px) {
   .delivery-features {
-    padding: 30px 10px 0;
+    padding: 28px 8px 0;
   }
 
   .features-box {
-    padding: 16px 12px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 82px;
+    padding: 20px 8px;
     transform: translateY(-12px);
-    border-radius: 14px;
-    gap: 14px;
+    border-radius: 16px;
+    gap: 4px;
+    box-sizing: border-box;
+  }
+
+  .feature-divider {
+    display: block;
+    width: 1px;
+    height: 38px;
+    background: #eeeeee;
+    margin: 0 2px;
+    flex-shrink: 0;
   }
 
   .feature-item {
-    gap: 10px;
-    justify-content: flex-start;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
   }
 
   .feature-item img {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
   }
 
   .feature-item h3 {
-    font-size: 15px;
+    font-size: 11.5px;
     line-height: 1.2;
+    letter-spacing: -0.2px;
+    margin: 0;
   }
 
   .install-app {
@@ -258,6 +370,31 @@
 }
 
 @media (max-width: 330px) {
+  .features-box {
+    min-height: 76px;
+    padding: 18px 6px;
+    gap: 3px;
+  }
+
+  .feature-divider {
+    margin: 0 1px;
+    height: 34px;
+  }
+
+  .feature-item {
+    gap: 5px;
+  }
+
+  .feature-item img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-item h3 {
+    font-size: 10.5px;
+    line-height: 1.15;
+  }
+
   .store-buttons {
     gap: 6px;
   }
