@@ -25,7 +25,7 @@
 }
 
 .step-icon {
-  height: 90px;
+  height: 130px;
   margin: 0 auto 16px;
   display: flex;
   align-items: center;
@@ -37,17 +37,17 @@
 }
 
 .step-icon img {
-  height: 84px;
+  height: 120px;
   width: auto;
-  max-width: 88px;
+  max-width: 125px;
   object-fit: contain;
-  filter: drop-shadow(0 8px 18px rgba(255, 179, 14, 0.25));
+  filter: drop-shadow(0 10px 22px rgba(255, 179, 14, 0.28));
   transition: all 0.3s ease;
 }
 
 .step:hover .step-icon img {
-  transform: translateY(-4px) scale(1.04);
-  filter: drop-shadow(0 12px 22px rgba(255, 179, 14, 0.38));
+  transform: translateY(-6px) scale(1.06);
+  filter: drop-shadow(0 14px 28px rgba(255, 179, 14, 0.42));
 }
 
 .step h3 {
@@ -84,16 +84,36 @@
 @media (max-width: 992px) {
   .steps-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 28px;
+  }
+
+  .step-icon {
+    height: 120px;
+    margin-bottom: 14px;
+  }
+
+  .step-icon img {
+    height: 110px;
+    max-width: 115px;
   }
 }
 
 @media (max-width: 576px) {
   .steps-container {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
     max-width: 320px;
     margin: 0 auto;
+  }
+
+  .step-icon {
+    height: 115px;
+    margin-bottom: 12px;
+  }
+
+  .step-icon img {
+    height: 105px;
+    max-width: 110px;
   }
 }
 
@@ -103,21 +123,21 @@
   }
 
   .step-icon {
-    height: 70px;
+    height: 100px;
     margin: 0 auto 10px;
   }
 
   .step-icon img {
-    height: 64px;
-    width: auto;
+    height: 92px;
+    max-width: 95px;
   }
 
   .step h3 {
-    font-size: 16.5px;
+    font-size: 17px;
     margin-bottom: 6px;
   }
 
   .step p {
-    font-size: 12.5px;
+    font-size: 13px;
   }
 }
